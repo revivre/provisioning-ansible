@@ -1,0 +1,33 @@
+---
+- name: Tap Homebrew Cask
+  homebrew_tap: tap=caskroom/cask state=present
+
+- name: Tap sanemat font 
+  homebrew_tap: tap=sanemat/font state=present
+
+- name: Install/Upgrade Homebrew Cask
+  homebrew: name=brew-cask state=latest
+
+- name: Tap external Homebrew Cask repositories
+  homebrew_tap: tap={{ item }} state=present
+  with_items: homebrew_cask_repositories
+  when: homebrew_cask_repositories
+
+- name: Install/Upgrade Homebrew Cask packages
+  homebrew_cask:
+    name={{ item.name | default(item) }}
+    state={{ item.state | default('present') }}
+  with_items: homebrew_cask_packages
+  when: homebrew_cask_packages
+
+- name: Install xquartz for Ricty
+  homebrew_cask: name=xquartz
+- name: Install fontforge for Ricty
+  homebrew: name=fontforge
+- name: Install Ricty
+  homebrew: name=ricty
+- name: Copy generated font files
+  shell: cp -f $(brew --cellar ricty)/*/share/fonts/Ricty*.ttf ~/Library/Fonts/
+  args:
+    creates: ~/Library/Fonts/Ricty-Bold.ttf
+  notify: run fc-cache

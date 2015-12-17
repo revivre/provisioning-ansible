@@ -1,0 +1,36 @@
+---
+homebrew_packages:
+  - readline
+  - zsh
+  - git
+  - tmux
+  - ansible
+  - wget
+  - curl
+  - vim
+  - rbenv
+  - ruby-build
+  - go
+  - peco
+  - tree
+  - heroku-toolbelt
+  - imagemagick
+  - reattach-to-user-namespace
+  - macvim
+  - { name: macvim, install_options: [with-cscope, with-lua, override-system-vim] }
+homebrew_cask_packages:
+  - java
+  - dash
+  - iterm2
+  - google-chrome
+  - firefox
+  - virtualbox
+  - vagrant
+  - kobito
+  - dropbox
+  - evernote
+  - skitch
+  - slack
+  - github-desktop
+  - atom
+  - adobe-reader
