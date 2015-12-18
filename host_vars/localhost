@@ -19,6 +19,8 @@ homebrew_packages:
   - reattach-to-user-namespace
   - macvim
   - { name: macvim, install_options: [with-cscope, with-lua, override-system-vim] }
+  - cmake
+  - graphviz
 homebrew_cask_packages:
   - java
   - dash
