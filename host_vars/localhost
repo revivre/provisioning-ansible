@@ -37,3 +37,4 @@ homebrew_cask_packages:
   - github-desktop
   - atom
   - adobe-reader
+  - flash
