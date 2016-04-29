@@ -30,7 +30,6 @@ homebrew_cask_packages:
   - firefox
   - virtualbox
   - vagrant
-  - kobito
   - dropbox
   - evernote
   - skitch
