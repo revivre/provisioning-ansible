@@ -39,3 +39,4 @@ homebrew_cask_packages:
   - atom
   - adobe-reader
   - flash
+  - caffeine
