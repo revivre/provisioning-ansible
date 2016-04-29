@@ -21,6 +21,7 @@ homebrew_packages:
   - { name: macvim, install_options: [with-cscope, with-lua, override-system-vim] }
   - cmake
   - graphviz
+  - python3
 homebrew_cask_packages:
   - java
   - dash
