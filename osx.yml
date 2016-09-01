@@ -7,7 +7,7 @@
   roles:
     - homebrew
     - homebrew-cask
-    - ruby
-    - ricty
+    #- ruby
+    #- ricty
     #- dotfiles
     #- ssh
